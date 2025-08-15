@@ -1,0 +1,804 @@
+{
+	"info": {
+		"_postman_id": "65de6af6-5aee-4439-afca-c796d20347dc",
+		"name": "deeptech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13135065"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "FIND ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"superadmin@deptech.com\",\r\n    \"password\":\"superadmin@deptech.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/users?page=1&limit=3&search=bud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "search",
+									"value": "bud"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"superadmin@deptech.com\",\r\n    \"password\":\"superadmin@deptech.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/643ef5d6-03e5-4565-b319-5318616a9576",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"643ef5d6-03e5-4565-b319-5318616a9576"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"firstName\": \"dimas\",\r\n    \"lastName\": \"firmansyah\",\r\n    \"email\": \"dimasfrmnsyh@gmail.com\",\r\n    \"birthDate\": \"1990-05-15\",\r\n    \"dateJoin\": \"2023-01-10\",\r\n    \"password\": \"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"gender\": \"L\",\r\n    \"phone\": \"081234567890\",\r\n    \"address\": \"Jl. Merdeka No. 1, Jakarta\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ONE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"firstName\": \"Budi\",\r\n    \"lastName\": \"Santoso\",\r\n    \"email\": \"budi.123@example.com\",\r\n    \"birthDate\": \"1990-05-15\",\r\n    \"dateJoin\": \"2023-01-10\",\r\n    \"gender\": \"L\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"1234567\",\r\n    \"phone\": \"081234567890\",\r\n    \"address\": \"Jl. Merdeka No. 1, Jakarta\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/9049cfa3-e97a-4371-806c-cfec32973631",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"9049cfa3-e97a-4371-806c-cfec32973631"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"firstName\": \"Budi\",\r\n    \"lastName\": \"Santoso\",\r\n    \"email\": \"budi.123@example.com\",\r\n    \"birthDate\": \"1990-05-15\",\r\n    \"dateJoin\": \"2023-01-10\",\r\n    \"gender\": \"L\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"1234567\",\r\n    \"phone\": \"081234567890\",\r\n    \"address\": \"Jl. Merdeka No. 1, Jakarta\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/9049cfa3-e97a-4371-806c-cfec32973631",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"9049cfa3-e97a-4371-806c-cfec32973631"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "leave",
+			"item": [
+				{
+					"name": "FIND ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"superadmin@deptech.com\",\r\n    \"password\":\"superadmin@deptech.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/leaves",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"leaves"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjQ5Zjc4NS0zMTI4LTQxZjEtOWZlMC1kODVlMjgwODE3ZTAiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MTc5NDM3LCJleHAiOjE3NTUyNjU4Mzd9.HrWwdA9rTpA12IY-BK0OJ_HGgb_rVpNq5XiuIxDZx3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"superadmin@deptech.com\",\r\n    \"password\":\"superadmin@deptech.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/users?page=1&limit=3&search=bud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "search",
+									"value": "bud"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:3001"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:3001/"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"macOS\""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": \"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\n    \"reason\": \"asd\",\n    \"startDate\": \"2025-02-01\",\n    \"endDate\": \"2025-02-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/leaves",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"leaves"
+							]
+						},
+						"description": "Generated from cURL: curl 'http://localhost:4000/leaves' \\\n  -H 'Accept: application/json, text/plain, */*' \\\n  -H 'Accept-Language: en-US,en;q=0.9' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8' \\\n  -H 'Connection: keep-alive' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Origin: http://localhost:3001' \\\n  -H 'Referer: http://localhost:3001/' \\\n  -H 'Sec-Fetch-Dest: empty' \\\n  -H 'Sec-Fetch-Mode: cors' \\\n  -H 'Sec-Fetch-Site: same-site' \\\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36' \\\n  -H 'sec-ch-ua: \"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  --data-raw '{\"employeeId\":\"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\"reason\":\"asd\",\"startDate\":\"2025-02-01\",\"endDate\":\"2025-02-01\"}'"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:3001"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:3001/"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"macOS\""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": \"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\n    \"reason\": \"asd\",\n    \"startDate\": \"2025-03-01\",\n    \"endDate\": \"2025-03-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/leaves/4b47fad0-278e-4965-a63c-6427130e7c06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"leaves",
+								"4b47fad0-278e-4965-a63c-6427130e7c06"
+							]
+						},
+						"description": "Generated from cURL: curl 'http://localhost:4000/leaves' \\\n  -H 'Accept: application/json, text/plain, */*' \\\n  -H 'Accept-Language: en-US,en;q=0.9' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8' \\\n  -H 'Connection: keep-alive' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Origin: http://localhost:3001' \\\n  -H 'Referer: http://localhost:3001/' \\\n  -H 'Sec-Fetch-Dest: empty' \\\n  -H 'Sec-Fetch-Mode: cors' \\\n  -H 'Sec-Fetch-Site: same-site' \\\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36' \\\n  -H 'sec-ch-ua: \"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  --data-raw '{\"employeeId\":\"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\"reason\":\"asd\",\"startDate\":\"2025-02-01\",\"endDate\":\"2025-02-01\"}'"
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:3001"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:3001/"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"macOS\""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": \"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\n    \"reason\": \"asd\",\n    \"startDate\": \"2025-03-01\",\n    \"endDate\": \"2025-03-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/leaves/4b47fad0-278e-4965-a63c-6427130e7c06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"leaves",
+								"4b47fad0-278e-4965-a63c-6427130e7c06"
+							]
+						},
+						"description": "Generated from cURL: curl 'http://localhost:4000/leaves' \\\n  -H 'Accept: application/json, text/plain, */*' \\\n  -H 'Accept-Language: en-US,en;q=0.9' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFlZDU2NS04OWRkLTQ2YWYtYWM4Yy0xZDczOWQzMjlkMjkiLCJlbWFpbCI6ImFkbWluQGRlcHRlY2guY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU1MjM3NTg0LCJleHAiOjE3NTUzMjM5ODR9.G5wLAMvvlnvSWjo0VrmauSOKe6HmaqaTo31hkAzAWB8' \\\n  -H 'Connection: keep-alive' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Origin: http://localhost:3001' \\\n  -H 'Referer: http://localhost:3001/' \\\n  -H 'Sec-Fetch-Dest: empty' \\\n  -H 'Sec-Fetch-Mode: cors' \\\n  -H 'Sec-Fetch-Site: same-site' \\\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36' \\\n  -H 'sec-ch-ua: \"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  --data-raw '{\"employeeId\":\"f6e8ca2a-ed24-4543-a819-5a8307331faa\",\"reason\":\"asd\",\"startDate\":\"2025-02-01\",\"endDate\":\"2025-02-01\"}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "leave_employee",
+			"item": [
+				{
+					"name": "FINDALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwY2E1N2YzOS0xMjc1LTQ1ODQtYTYwNi0yZjkwNzA3MDZmZjUiLCJlbWFpbCI6ImRpbWFzZnJtbnN5aEBnbWFpbC5jb20iLCJyb2xlIjoiRU1QTE9ZRUUiLCJpYXQiOjE3NTUyNDQxNjAsImV4cCI6MTc1NTMzMDU2MH0.gVMWURfa-I8VBAxbJ5Khc72qaNMx0WZNhrQ_zBhhvWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/me/leaves",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"me",
+								"leaves"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwY2E1N2YzOS0xMjc1LTQ1ODQtYTYwNi0yZjkwNzA3MDZmZjUiLCJlbWFpbCI6ImRpbWFzZnJtbnN5aEBnbWFpbC5jb20iLCJyb2xlIjoiRU1QTE9ZRUUiLCJpYXQiOjE3NTUyNDQxNjAsImV4cCI6MTc1NTMzMDU2MH0.gVMWURfa-I8VBAxbJ5Khc72qaNMx0WZNhrQ_zBhhvWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reason\": \"hamil\",\n  \"startDate\": \"2025-09-05\",\n  \"endDate\": \"2025-09-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/me/leaves",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"me",
+								"leaves"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FINDONE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwY2E1N2YzOS0xMjc1LTQ1ODQtYTYwNi0yZjkwNzA3MDZmZjUiLCJlbWFpbCI6ImRpbWFzZnJtbnN5aEBnbWFpbC5jb20iLCJyb2xlIjoiRU1QTE9ZRUUiLCJpYXQiOjE3NTUyNDQxNjAsImV4cCI6MTc1NTMzMDU2MH0.gVMWURfa-I8VBAxbJ5Khc72qaNMx0WZNhrQ_zBhhvWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/me/leaves/525434de-124d-4c1a-b7d8-47b1f1be2733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"me",
+								"leaves",
+								"525434de-124d-4c1a-b7d8-47b1f1be2733"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwY2E1N2YzOS0xMjc1LTQ1ODQtYTYwNi0yZjkwNzA3MDZmZjUiLCJlbWFpbCI6ImRpbWFzZnJtbnN5aEBnbWFpbC5jb20iLCJyb2xlIjoiRU1QTE9ZRUUiLCJpYXQiOjE3NTUyNDQxNjAsImV4cCI6MTc1NTMzMDU2MH0.gVMWURfa-I8VBAxbJ5Khc72qaNMx0WZNhrQ_zBhhvWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/me/leaves/525434de-124d-4c1a-b7d8-47b1f1be2733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"me",
+								"leaves",
+								"525434de-124d-4c1a-b7d8-47b1f1be2733"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwY2E1N2YzOS0xMjc1LTQ1ODQtYTYwNi0yZjkwNzA3MDZmZjUiLCJlbWFpbCI6ImRpbWFzZnJtbnN5aEBnbWFpbC5jb20iLCJyb2xlIjoiRU1QTE9ZRUUiLCJpYXQiOjE3NTUyNDQxNjAsImV4cCI6MTc1NTMzMDU2MH0.gVMWURfa-I8VBAxbJ5Khc72qaNMx0WZNhrQ_zBhhvWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reason\": \"hamil\",\n  \"startDate\": \"2025-09-05\",\n  \"endDate\": \"2025-09-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/me/leaves/525434de-124d-4c1a-b7d8-47b1f1be2733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"me",
+								"leaves",
+								"525434de-124d-4c1a-b7d8-47b1f1be2733"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@deptech.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DASHBOARD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDY0NGU0MDYxNjU5MmRjMmIxNDMyMTcyMjAzIiwiZW1haWwiOiJhZG1pbkBrcGlpbnN0aXR1dGUuY29tIiwibmFtZSI6IlRoZSAgS1BJIEluc3RpdHV0ZSIsInJvbGVzIjoiQURNSU4iLCJyb2xlSWQiOiI3MGFhYzY0NC0yNGQ5LTRmMTAtYWIyMy1hOWFkNTc2MTE2YTciLCJyb2xlVHlwZSI6InN1cGVyX2FkbWluaXN0cmF0b3IiLCJjb21wYW55IjoiNjQ2NDRlNDA2MTY1OTJkYzJiMTQzMjMyIiwibG9nZ2VkSW5BdCI6IjIwMjUtMDMtMDRUMDU6MzE6MjMuNzUxWiIsImNvbXBhbnlOYW1lIjoiVGhlIEtQSSBJbnN0aXR1dGUiLCJpYXQiOjE3NDEwNjYyODMsImV4cCI6MTc0MTE1MjY4M30._MZGL5b6cpRmg2-mFb9BChGqUn5JLVUAPQsK1ZOPnZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/dashboard/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"dashboard",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
