@@ -11,4 +11,3 @@ Gunakan akun berikut untuk login sebagai Superadmin setelah menjalankan seeder:
 - **Email**: `admin@deptech.com`  
 - **Password**: `123456`
 
-## Langkah Menjalankan (Local)
